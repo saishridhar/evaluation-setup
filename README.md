@@ -1,5 +1,2 @@
-# evaluation-setup
-The setup for human evaluation
-
-# Running UI
+# Running the UI
 ``` streamlit run app.py ```
