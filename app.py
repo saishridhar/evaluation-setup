@@ -14,7 +14,7 @@ splits = ['User_1', 'User_2', 'User_3', 'User_4', 'User_5']
 
 def update_json(filename, question_index, response, model):
     try:
-        with open(f'output/{filename}.json', 'r') as f:
+        with open(f'{filename}.json', 'r') as f:
             data = [json.loads(line) for line in f]
     except FileNotFoundError:
         data = []
@@ -34,7 +34,7 @@ def update_json(filename, question_index, response, model):
         data[question_index]['human_eval'] = {model: response}
 
     # Write the updated data back to the file
-    with open(f'output/{filename}.json', 'w') as f:
+    with open(f'{filename}.json', 'w') as f:
         for item in data:
             f.write(json.dumps(item) + '\n')
 
